@@ -1,3 +1,4 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # FIShBOTR <img src="man/figures/package-sticker.png" align="right" style="float:right; height:120px;"/>
@@ -12,7 +13,7 @@ Check](https://github.com/GMaynard1/FIShBOTR/actions/workflows/R-CMD-check.yaml/
 [![Test
 coverage](https://github.com/GMaynard1/FIShBOTR/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/GMaynard1/FIShBOTR/actions/workflows/test-coverage.yaml)
 [![codecov](https://codecov.io/gh/GMaynard1/FIShBOTR/branch/master/graph/badge.svg)](https://codecov.io/gh/GMaynard1/FIShBOTR)
-[![License: GPL (&gt;=
+[![License: GPL (\>=
 2)](https://img.shields.io/badge/License-GPL%20%28%3E%3D%202%29-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)
 <!-- badges: end -->
 
@@ -30,7 +31,14 @@ coverage](https://github.com/GMaynard1/FIShBOTR/actions/workflows/test-coverage.
 
 ## Overview
 
-The R package `FIShBOTR`… **{{ DESCRIBE YOUR PACKAGE }}**
+The R package `FIShBOTR`provides R helper functions to make use of the
+FIShBOT dataset. Fishing Industry Shared Bottom Oceanographic Timeseries
+(FIShBOT) is a standardized in-situ gridded bottom temperature product
+derived from cooperative research data streams. The data are collected
+by commercial fishermen operating in US waters of the Northwest Atlantic
+Ocean. To improve efficiency, the data are stored as a table online.
+This package converts the data back to a grid and provides a number of
+functions to facilitate analysis.
 
 ## Features
 
@@ -42,17 +50,21 @@ The main purpose of `FIShBOTR` is to… **{{ DESCRIBE THE MAIN FEATURES
 You can install the development version from
 [GitHub](https://github.com/) with:
 
-    ## Install < remotes > package (if not already installed) ----
-    if (!requireNamespace("remotes", quietly = TRUE)) {
-      install.packages("remotes")
-    }
+``` r
+## Install < remotes > package (if not already installed) ----
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
 
-    ## Install < FIShBOTR > from GitHub ----
-    remotes::install_github("GMaynard1/FIShBOTR")
+## Install < FIShBOTR > from GitHub ----
+remotes::install_github("GMaynard1/FIShBOTR")
+```
 
 Then you can attach the package `FIShBOTR`:
 
-    library("FIShBOTR")
+``` r
+library("FIShBOTR")
+```
 
 ## Get started
 
@@ -65,10 +77,10 @@ vignette.
 `FIShBOTR` provides **{{ NUMBER OF VIGNETTES }}** vignettes to learn
 more about the package:
 
--   the [Get
-    started](https://GMaynard1.github.io/FIShBOTR/articles/FIShBOTR.html)
-    vignette describes the core features of the package
--   **{{ LIST ADDITIONAL VIGNETTES }}**
+- the [Get
+  started](https://GMaynard1.github.io/FIShBOTR/articles/FIShBOTR.html)
+  vignette describes the core features of the package
+- **{{ LIST ADDITIONAL VIGNETTES }}**
 
 ## Citation
 

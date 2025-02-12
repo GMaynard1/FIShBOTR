@@ -7,9 +7,18 @@ Authors@R: c(
            family  = "Maynard",
            role    = c("aut", "cre", "cph"),
            email   = "george.maynard@noaa.gov",
-           comment = c(ORCID = "0000-0003-4246-2345")))
-Description: A paragraph providing a full description of the project (on 
-    several lines...)
+           comment = c(ORCID = "0000-0003-4246-2345")),
+    person(given = "Sarah",
+           family = "Salois",
+           role = "c("aut","cre","cph"),
+           email = "sarah.salois@noaa.gov"))
+Description: This packages provides R helper functions to make use of the FIShBOT
+  dataset. Fishing Industry Shared Bottom Oceanographic Timeseries (FIShBOT) is 
+  a standardized in-situ gridded bottom temperature product derived from 
+  cooperative research data streams. The data are collected by commercial fishermen
+  operating in US waters of the Northwest Atlantic Ocean. To improve efficiency, 
+  the data are stored   as a table online. This package converts the data back to 
+  a grid and provides a number of functions to facilitate analysis. 
 URL: https://github.com/GMaynard1/FIShBOTR
 BugReports: https://github.com/GMaynard1/FIShBOTR/issues
 License: GPL (>= 2)

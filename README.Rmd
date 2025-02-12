@@ -45,7 +45,13 @@ FIShBOTR <img src="man/figures/package-sticker.png" align="right" style="float:r
 ## Overview
 
 
-The R package `FIShBOTR`... **{{ DESCRIBE YOUR PACKAGE }}**
+The R package `FIShBOTR`provides R helper functions to make use of the FIShBOT
+  dataset. Fishing Industry Shared Bottom Oceanographic Timeseries (FIShBOT) is 
+  a standardized in-situ gridded bottom temperature product derived from 
+  cooperative research data streams. The data are collected by commercial fishermen
+  operating in US waters of the Northwest Atlantic Ocean. To improve efficiency, 
+  the data are stored   as a table online. This package converts the data back to 
+  a grid and provides a number of functions to facilitate analysis. 
 
 
 
