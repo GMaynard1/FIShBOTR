@@ -4,11 +4,11 @@
 \alias{fishbot_download}
 \title{fishbot_download}
 \usage{
-fishbot_download(region = NA, startDate, endDate)
+fishbot_download(EPU = NA, startDate, endDate)
 }
 \arguments{
-\item{region}{the region of the dataset to download. Acceptable values include
-'GOM' for Gulf of Maine, 'SNE' for Southern New England, or 'MAB' for Mid-Atlantic
+\item{EPU}{the EPU of the dataset to download. Acceptable values include
+'GOM' for Gulf of Maine, 'GB' for Georges Bank, or 'MAB' for Mid-Atlantic
 Bight. The default value is NA (no bounding box applied).}
 
 \item{startDate}{The earliest date to return. Must be provided in the format yyyy-mm-dd.
@@ -39,7 +39,7 @@ First pass at this downloads a .csv file within a date range and bounding box
 \examples{
 
 fishbot_download(
-  region = 'GOM',
+  EPU = 'GOM',
   startDate = '2023-08-01',
   endDate = '2023-08-31'
   )

@@ -23,9 +23,10 @@
 #' @param clip_shape can either be a polygon shapefile (NAD83), a bounding box in the format
 #'    c(min_lat, max_lat, min_lon, max_lon) with all coordinates expressed in decimal
 #'    degrees, a character vector of statistical areas in the format 
-#'    c("SA-514","SA-521"), or a character vector of EPUs that can be one or more
-#'    of the following: "EPU-GOM", "EPU-GB", "EPU-SS" or "EPU-MAB" for Gulf of Maine, Georges Bank, 
-#'    Scotian Shelf, and Mid-Atlantic Bight respectively. This vector can be any length. Note that the clip is 
+#'    c("SA-514","SA-521") or a character vector of a single Ecosystem Production Unit 
+#'    (EPU) that can be one of the following: "EPU-GOM", "EPU-GB", 
+#'    "EPU-SS" or "EPU-MAB" for Gulf of Maine, Georges Bank, Scotian Shelf, and 
+#'    Mid-Atlantic Bight respectively. Note that the clip is 
 #'    exact. Grid cells that are intersected by the clip_shape will be 
 #'    proportioned in subsequent analyses. There is no default value for clip_shape. 
 #' 
