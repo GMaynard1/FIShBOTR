@@ -6,7 +6,7 @@
 \alias{FIShBOTR-package}
 \title{FIShBOTR: The Title of the Project}
 \description{
-A paragraph providing a full description of the project (on several lines...)
+This packages provides R helper functions to make use of the FIShBOT dataset. Fishing Industry Shared Bottom Oceanographic Timeseries (FIShBOT) is a standardized in-situ gridded bottom temperature product derived from cooperative research data streams. The data are collected by commercial fishermen operating in US waters of the Northwest Atlantic Ocean. To improve efficiency, the data are stored as a table online. This package converts the data back to a grid and provides a number of functions to facilitate analysis.
 }
 \seealso{
 Useful links:
@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: George Maynard \email{george.maynard@noaa.gov} (\href{https://orcid.org/0000-0003-4246-2345}{ORCID}) [copyright holder]
+\strong{Maintainer}: George Maynard \email{george.maynard@noaa.gov} (\href{https://orcid.org/0000-0003-4246-2345}{ORCID})
 
 }
 \keyword{internal}
