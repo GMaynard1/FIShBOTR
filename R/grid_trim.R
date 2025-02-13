@@ -20,10 +20,12 @@
 #' 
 #' Uses a shapefile or bounding box to trim the FIShBOT grid to the specified size
 #'
-#' @param clip_shape can either be a polygon shapefile, a bounding box in the format
+#' @param clip_shape can either be a polygon shapefile (NAD83), a bounding box in the format
 #'    c(min_lat, max_lat, min_lon, max_lon) with all coordinates expressed in decimal
-#'    degrees, or a character vector of statistical areas in the format 
-#'    c("SA-514","SA-521"). This vector can be any length. Note that the clip is 
+#'    degrees, a character vector of statistical areas in the format 
+#'    c("SA-514","SA-521"), or a character vector of EPUs that can be one or more
+#'    of the following: "EPU-GOM", "EPU-GB", "EPU-SS" or "EPU-MAB" for Gulf of Maine, Georges Bank, 
+#'    Scotian Shelf, and Mid-Atlantic Bight respectively. This vector can be any length. Note that the clip is 
 #'    exact. Grid cells that are intersected by the clip_shape will be 
 #'    proportioned in subsequent analyses. There is no default value for clip_shape. 
 #' 
@@ -46,16 +48,34 @@ grid_trim=function(clip_shape){
     raster::crs(clip_poly)="+proj=longlat +ellps=GRS80 +datum=NAD83
 +no_defs +towgs84=0,0,0"
   } else {
-    if(typeof(clip_shape)=="character"){
+    if(typeof(clip_shape)=="character"&grepl("SA-",clip_shape)){
       ## If the clip_shape argument is a character argument it is treated as a 
       ## vector of Statistical Areas, which are extracted from a
       ## shapefile retrieved from https://www.fisheries.noaa.gov/resource/map/greater-atlantic-region-statistical-areas
       ## and stored within the package
       clip_poly=subset(stat_areas,stat_areas$Id%in%as.numeric(gsub("SA-","",clip_shape)))
     } else {
-    if(typeof(clip_shape)=="list"){
-      ## If the clip_shape argument is a list, it is treated as a spatial object already
-      clip_poly=clip_shape
+      if(typeof(clip_shape)=="list"){
+        ## If the clip_shape argument is a list, it is treated as a spatial object already
+        clip_poly=clip_shape
+      } else {
+        if(typeof(clip_shape)=="character"&grepl("EPU-",clip_shape)){
+          if(clip_shape=="EPU-GOM"){
+            clip_poly=subset(epu,epu$EPU=="GOM")
+          }else{
+            if(clip_shape=="EPU-GB"){
+              clip_poly=subset(epu,epu$EPU=="GB")
+            } else {
+              if(clip_shape=="EPU-SS"){
+                clip_poly=subset(epu,epu$EPU=="SS")
+              } else {
+                if(clip_shape=="EPU-MAB"){
+                  clip_poly=subset(epu,epu$EPU=="MAB")
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
