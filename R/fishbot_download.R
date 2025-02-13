@@ -53,15 +53,15 @@
 fishbot_download=function(region=NA,startDate,endDate){
   ## Select bounding box, if necessary
   if(is.na(region)==FALSE){
-    ifelse(
+    coords=ifelse(
       region=='GOM',
-      coords=c(),
+      c(1,1,1,1),
       ifelse(
         region=='SNE',
-        coords=c(),
+        c(1,1,1,1),
         ifelse(
           region=='MAB',
-          coords=c(),
+          c(1,1,1,1),
           stop("\n Region Not Recognized, please select 'GOM','SNE', or 'MAB' or leave blank \n")
         )
       )
@@ -87,4 +87,3 @@ fishbot_download=function(region=NA,startDate,endDate){
   data=read.csv(url)
   return(data)
 }
-url="https://erddap.ondeckdata.com/erddap/tabledap/fishbot_realtime.csvp?time%2Ctemperature%2Ctemperature_min%2Ctemperature_max%2Ctemperature_std%2Ctemperature_count%2Cdata_source%2Cgrid_id%2Cstat_area%2Cdepth%2Clatitude%2Clongitude&time%3E=2023-08-01T00%3A00%3A00Z&time%3C=2023-08-31T00%3A00%3A00Z&latitude%3E=20&latitude%3C=60&longitude%3E=-90&longitude%3C=-40"
