@@ -24,9 +24,8 @@
 #'    c(min_lat, max_lat, min_lon, max_lon) with all coordinates expressed in decimal
 #'    degrees, or a character vector of statistical areas in the format 
 #'    c("SA-514","SA-521"). This vector can be any length. Note that the clip is 
-#'    not exact. Rather, it includes all grid cells that are included within the 
-#'    bounding shape as well as any grid cells intersected by the bounding shape. 
-#'    There is no default value for clip_shape. 
+#'    exact. Grid cells that are intersected by the clip_shape will be 
+#'    proportioned in subsequent analyses. There is no default value for clip_shape. 
 #' 
 #' @return Returns a trimmed version of the FIShBOT grid as a spatial dataframe
 #'
@@ -53,12 +52,13 @@ grid_trim=function(clip_shape){
       ## shapefile retrieved from https://www.fisheries.noaa.gov/resource/map/greater-atlantic-region-statistical-areas
       ## and stored within the package
       clip_poly=subset(stat_areas,stat_areas$Id%in%as.numeric(gsub("SA-","",clip_shape)))
-    }
-  } else {
+    } else {
     if(typeof(clip_shape)=="list"){
       ## If the clip_shape argument is a list, it is treated as a spatial object already
       clip_poly=clip_shape
+      }
     }
   }
   intersect_grid=sf::st_intersection(grid_7km,clip_poly)
+  return(intersect_grid)
 }
