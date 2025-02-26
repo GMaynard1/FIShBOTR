@@ -105,7 +105,7 @@ vignette describes the core features of the package
 
 Please cite `FIShBOTR` as: 
 
-> Maynard George (`r format(Sys.Date(), "%Y")`) FIShBOTR: An R 
+> Maynard George, Salois Sarah (`r format(Sys.Date(), "%Y")`) FIShBOTR: An R 
 package to **{{ TITLE }}**. R package version 0.0.0.9000. 
 <https://github.com/GMaynard1/FIShBOTR/>
 
