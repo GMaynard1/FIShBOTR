@@ -86,7 +86,7 @@ more about the package:
 
 Please cite `FIShBOTR` as:
 
-> Maynard George (2025) FIShBOTR: An R package to **{{ TITLE }}**. R
+> Maynard George, Salois Sarah (2025) FIShBOTR: An R package to **{{ TITLE }}**. R
 > package version 0.0.0.9000. <https://github.com/GMaynard1/FIShBOTR/>
 
 ## Contributing
