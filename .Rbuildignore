@@ -9,3 +9,6 @@
 ^README\.html$
 ^_pkgdown\.yaml$
 ^CITATION\.cff$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
