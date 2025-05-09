@@ -3,7 +3,7 @@ pkgdown: 2.1.2
 pkgdown_sha: ~
 articles:
   FIShBOTR: FIShBOTR.html
-last_built: 2025-05-09T18:19Z
+last_built: 2025-05-09T19:06Z
 urls:
   reference: https://api.github.com/repos/GMaynard1/FIShBOTR/pages/reference
   article: https://api.github.com/repos/GMaynard1/FIShBOTR/pages/articles
