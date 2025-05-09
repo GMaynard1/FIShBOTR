@@ -4,5 +4,5 @@ template:
   light-switch: true
 navbar:
   structure:
-    left:  [Get started, reference, articles, Changelog]
+    left:  [intro, reference, articles, news]
     right: [search, github, lightswitch]
