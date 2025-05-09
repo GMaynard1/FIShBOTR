@@ -1,0 +1,50 @@
+---
+title: "Using fishbot_download"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using fishbot_download}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ecodata)
+```
+
+## Using fishbot_download()
+
+Included in this package is a function that connects to the ERDDAP server and 
+downloads data at user-specified temporal and spatial scales. This function 
+takes in a start and end date as well as the EPU of interest (GOM, GB, MAB).
+
+`fishbot_download()` returns a dataframe which includes all 
+available variables (time, temperature, temperature min/max and standard
+deviation, number of temperature observations, depth, latitude and
+longitude)
+
+```
+fishbot_download(
+   EPU = 'GOM',
+   startDate = '2023-08-01',
+   endDate = '2023-08-31'
+  )
+
+#Plot series with trend 
+ggplot2::ggplot(data = data,aes(x = x, y = y)) +
+  geom_line() +
+  geom_gls()
+```
+
+produces 
+
+```{r showtab, echo=F}
+### fix this to have the right path
+knitr::include_graphics(path="https://raw.githubusercontent.com/GMaynard1/FIShBOTR/blob/master/R/docs/images/fishbot_download.png")
+```
