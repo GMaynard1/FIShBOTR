@@ -2,3 +2,7 @@ url: https://api.github.com/repos/GMaynard1/FIShBOTR/pages
 template:
   bootstrap: 5
   light-switch: true
+navbar:
+  structure:
+    left:  [Get started, reference, articles, Changelog]
+    right: [search, github, lightswitch]
