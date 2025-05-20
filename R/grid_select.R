@@ -36,14 +36,16 @@
 #'   @export
 
 grid_select=function(data){
-  sp::coordinates(data) = cbind(data$longitude,data$latitude)
-  data=sf::st_as_sf(
-    data
+  if(class(data)[1]=="data.frame"){
+    sp::coordinates(data) = cbind(data$longitude,data$latitude)
+    data=sf::st_as_sf(
+      data
     )
-  data=sf::st_transform(
-    data,
-    crs=4326
-  )
+    data=sf::st_transform(
+      data,
+      crs=4326
+    )
+  }
   grid_7km=sf::st_transform(
     grid_7km,
     crs=4326
