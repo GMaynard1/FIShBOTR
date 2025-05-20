@@ -19,5 +19,10 @@ Useful links:
 \author{
 \strong{Maintainer}: George Maynard \email{george.maynard@noaa.gov} (\href{https://orcid.org/0000-0003-4246-2345}{ORCID})
 
+Authors:
+\itemize{
+  \item Sarah Salois \email{sarah.salois@noaa.gov}
+}
+
 }
 \keyword{internal}
