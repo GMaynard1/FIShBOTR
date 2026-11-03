@@ -1,0 +1,113 @@
+# FIShBOTR ![](reference/figures/package-sticker.png)
+
+• [Overview](#overview)  
+• [Features](#features)  
+• [Installation](#installation)  
+• [Get started](#get-started)  
+• [Long-form documentations](#long-form-documentations)  
+• [Citation](#citation)  
+• [Contributing](#contributing)  
+• [Acknowledgments](#acknowledgments)  
+• [References](#references)
+
+## Overview
+
+The R package `FIShBOTR`provides R helper functions to make use of the
+FIShBOT dataset. Fishing Industry Shared Bottom Oceanographic Timeseries
+(FIShBOT) is a standardized in-situ gridded bottom temperature product
+derived from cooperative research data streams. The data are collected
+by commercial fishermen operating in US waters of the Northwest Atlantic
+Ocean. To improve efficiency, the data are stored as a table online.
+This package converts the data back to a grid and provides a number of
+functions to facilitate analysis.
+
+## Features
+
+The main purpose of `FIShBOTR` is to… **{{ DESCRIBE THE MAIN FEATURES
+}}**
+
+## Installation
+
+You can install the development version from
+[GitHub](https://github.com/) with:
+
+``` r
+
+## Install < remotes > package (if not already installed) ----
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
+
+## Install < FIShBOTR > from GitHub ----
+remotes::install_github("GMaynard1/FIShBOTR")
+```
+
+Then you can attach the package `FIShBOTR`:
+
+``` r
+
+library("FIShBOTR")
+```
+
+## Get started
+
+For an overview of the main features of `FIShBOTR`, please read the [Get
+started](https://GMaynard1.github.io/FIShBOTR/articles/FIShBOTR.html)
+vignette.
+
+## Long-form documentations
+
+`FIShBOTR` provides **{{ NUMBER OF VIGNETTES }}** vignettes to learn
+more about the package:
+
+- the [Get
+  started](https://GMaynard1.github.io/FIShBOTR/articles/FIShBOTR.html)
+  vignette describes the core features of the package
+- **{{ LIST ADDITIONAL VIGNETTES }}**
+
+## Citation
+
+Please cite `FIShBOTR` as:
+
+> Maynard George, Salois Sarah (2025) FIShBOTR: An R package to **{{
+> TITLE }}**. R package version 0.0.0.9000.
+> <https://github.com/GMaynard1/FIShBOTR/>
+
+## Contributing
+
+All types of contributions are encouraged and valued. For more
+information, check out our [Contributor
+Guidelines](https://github.com/GMaynard1/FIShBOTR/blob/main/CONTRIBUTING.md).
+
+Please note that the `FIShBOTR` project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
+
+## Acknowledgments
+
+**{{ OPTIONAL SECTION }}**
+
+## References
+
+**{{ OPTIONAL SECTION }}**
+
+# Package index
+
+## All functions
+
+- [`fishbot_download()`](https://api.github.com/repos/GMaynard1/FIShBOTR/pages/reference/fishbot_download.md)
+  : fishbot_download
+- [`grid_select()`](https://api.github.com/repos/GMaynard1/FIShBOTR/pages/reference/grid_select.md)
+  : grid_select
+- [`grid_trim()`](https://api.github.com/repos/GMaynard1/FIShBOTR/pages/reference/grid_trim.md)
+  : grid_trim
+- [`print_msg()`](https://api.github.com/repos/GMaynard1/FIShBOTR/pages/reference/print_msg.md)
+  : Print a message
+
+# Articles
+
+### All vignettes
+
+- [Get
+  started](https://api.github.com/repos/GMaynard1/FIShBOTR/pages/articles/FIShBOTR.md):
